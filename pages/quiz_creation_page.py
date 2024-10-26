@@ -98,7 +98,7 @@ def search_vectors(collection_name, query_vector, top_k=10):
 def retrieve_results(user_query):
     # Create MongoDB Atlas Vector Search instance
     vector_search = MongoDBAtlasVectorSearch.from_connection_string(
-        "mongodb+srv://username:password@cluster0.ctxcrvl.mongodb.net/?retryWrites=true&w=majority&appName=YourApp",
+        "mongodb+srv://qhfma1687:<db_password>@example.1rah3.mongodb.net/?retryWrites=true&w=majority&appName=example",
         "langchain_db.test",
         OpenAIEmbeddings(model="gpt-3.5-turbo-0125"),
         index_name="vector_index"
