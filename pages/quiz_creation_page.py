@@ -43,7 +43,7 @@ def is_url(input_string):
 #acm41th:vCcYRo8b4hsWJkUj@cluster0 여기까지가 아이디:비밀번호:클러스터 주소라 필수적입니다. 마지막 앱네임도 클러스터명
 
 #Vectorstore
-client = MongoClient("mongodb+srv://acm41th:vCcYRo8b4hsWJkUj@cluster0.ctxcrvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient("mongodb+srv://qhfma1687:<db_password>@example.1rah3.mongodb.net/?retryWrites=true&w=majority&appName=example")
 #client['your_database_name']이 데베 이름입니다. 데베1은 파이썬 관련 정보가 용량이 적길래 일단 넣어줬습니다.
 #임베딩 항목은 따로 처리해서 넣어줘야 할 겁니다.
 #랭체인도 데모 데이터로 몽고디비 관련 내용이고 엠플릭스도 영화 관련 데모 데이터입니다.
@@ -52,7 +52,7 @@ client = MongoClient("mongodb+srv://acm41th:vCcYRo8b4hsWJkUj@cluster0.ctxcrvl.mo
 #, langchain_db.test처럼 넣어서 쓰면 됩니다.
 
 def connect_db():
-    client = MongoClient("mongodb+srv://acm41th:vCcYRo8b4hsWJkUj@cluster0.ctxcrvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    client = MongoClient("mongodb+srv://qhfma1687:<db_password>@example.1rah3.mongodb.net/?retryWrites=true&w=majority&appName=example")
     return client[langchain_db]
 
 def insert_documents(collection_name, documents):
@@ -377,7 +377,7 @@ def quiz_creation_page():
                         llm = ChatOpenAI(model="gpt-3.5-turbo-0125")
                         embeddings = OpenAIEmbeddings()
 
-                        uri = "mongodb+srv://acm41th:vCcYRo8b4hsWJkUj@cluster0.ctxcrvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+                        uri = "mongodb+srv://qhfma1687:<db_password>@example.1rah3.mongodb.net/?retryWrites=true&w=majority&appName=example"
                         # Create a new client and connect to the server
                         client = MongoClient(uri, server_api=ServerApi('1'))
                         # Send a ping to confirm a successful connection
@@ -388,7 +388,7 @@ def quiz_creation_page():
                             st.write(e)
 
                         # Vectorstore
-                        # client = MongoClient("mongodb+srv://acm41th:vCcYRo8b4hsWJkUj@cluster0.ctxcrvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+                        # client = MongoClient("mongodb+srv://qhfma1687:<db_password>@example.1rah3.mongodb.net/?retryWrites=true&w=majority&appName=example")
 
                         # Define collection and index name
                         db_name = "langchain_db"
@@ -482,7 +482,7 @@ def quiz_creation_page():
                             is_topic = topic
                         st.write(f"{is_topic}")
 
-                        uri = "mongodb+srv://acm41th:vCcYRo8b4hsWJkUj@cluster0.ctxcrvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+                        uri = "mongodb+srv://qhfma1687:<db_password>@example.1rah3.mongodb.net/?retryWrites=true&w=majority&appName=example"
                         # Create a new client and connect to the server
                         client = MongoClient(uri, server_api=ServerApi('1'))
                         # Send a ping to confirm a successful connection
@@ -493,7 +493,7 @@ def quiz_creation_page():
                             st.write(e)
 
                         # Vectorstore
-                        # client = MongoClient("mongodb+srv://acm41th:vCcYRo8b4hsWJkUj@cluster0.ctxcrvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+                        # client = MongoClient("mongodb+srv://qhfma1687:<db_password>@example.1rah3.mongodb.net/?retryWrites=true&w=majority&appName=example")
 
 
                         # 데이터베이스 및 컬렉션 설정
