@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    lsmith:
+      email: langmith@gmail.com
+      name: Smith Lang
+      password: '123' # To be replaced with hashed password
+    samid:
+      email: acm41th@gmail.com
+      name: sample id
+      password: '456' # To be replaced with hashed password
+cookie:
+  expiry_days: 0  # 만료일: 재인증 기능 필요없으면 0으로 세팅
+  key: random_signature_key
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - acm41th@gmail.com
